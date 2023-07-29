@@ -58,10 +58,7 @@ app.post("/webhook", (req, res) => {
       axios({
         method: "POST",
         url:
-          "https://graph.facebook.com/v17.0/" +
-          phn_no_id +
-          "/messages?access_token=" +
-          api_key,
+          "https://graph.facebook.com/v17.0/" +phn_no_id +"/messages",
         data: {
           messaging_product: "whatsapp",
           to: from,
@@ -70,6 +67,7 @@ app.post("/webhook", (req, res) => {
           },
         },
         headers: {
+          "Authorization":`Bearer ${token}`,
           "Content-Type": "application/json",
         },
       });

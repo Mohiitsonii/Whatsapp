@@ -16,7 +16,7 @@ const token = process.env.MY_TOKEN
 // console.log(mytoken,token)
 
 
-app.get("/webhooks", (req, res) => {
+app.get("/webhook", (req, res) => {
   let mode = req.query["hub.mode"];
   let challenge = req.query[" hub.challenge"];
   let token = req.query["hub.verify_token"];

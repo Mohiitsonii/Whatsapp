@@ -70,3 +70,7 @@ app.post("/webhook", (req, res) => {
     }
   }
 });
+
+app.get("/",(req,res)=>{
+  console.log("The service is going on")
+})

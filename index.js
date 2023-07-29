@@ -72,5 +72,6 @@ app.post("/webhook", (req, res) => {
 });
 
 app.get("/",(req,res)=>{
-  console.log("The service is going on")
+  res.status(200).send("hello Everything is working fine")
+  // console.log("The service is going on")
 })

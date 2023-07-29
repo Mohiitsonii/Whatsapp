@@ -10,8 +10,8 @@ app.listen(8000 ||process.env.PORT, () => {
   console.log("webhook is listing");
 });
 
-const mytoken = process.env.TOKEN;
-const token = process.env.MY_TOKEN
+const api_key = process.env.MY_TOKEN;
+const random_token = process.env.TOKEN;
 
 // console.log(mytoken,token)
 
@@ -33,7 +33,7 @@ app.get("/webhook", (req, res) => {
   // res.status.send(mode,)
 
   if (mode && token) {
-    if (mode === "subscribe" && token === mytoken) {
+    if (mode === "subscribe" && token === random_token) { 
       res.status(200).send(challenge);
     } else {
       res.status(404);

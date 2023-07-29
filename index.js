@@ -61,7 +61,7 @@ app.post("/webhook", (req, res) => {
           "https://graph.facebook.com/v17.0/" +
           phn_no_id +
           "/messages?access_token=" +
-          token,
+          api_key,
         data: {
           messaging_product: "whatsapp",
           to: from,
@@ -72,7 +72,6 @@ app.post("/webhook", (req, res) => {
         headers: {
           "Content-Type": "application/json",
         },
-
       });
       res.sendStatus(200);
     }

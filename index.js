@@ -22,7 +22,7 @@ app.get("/webhook", (req, res) => {
  const token = req.query["hub.verify_token"];
 
  console.log(
-   "this is query",
+   "this is Webhook called ",
    req.query["hub.mode"],
    req.query["hub.challenge"],
    req.query["hub.verify_token"]
